@@ -24,3 +24,7 @@ Route::get('/hello', function () {
 Route::get('/naver', function () {
     return view('naver');
 });
+
+Route::get('/myphp', function () {
+    return view('myphp');
+});
