@@ -16,7 +16,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>게시판</title>
+  <title>일기장</title>
   <link rel="stylesheet" type="text/css" href="http://cafecj.daum-img.net/cafebackup/css/1/backup.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
   <style>
@@ -35,10 +35,7 @@
     <?php include('navbar.php');?>
     <?php include('menu.php');?>
     <div class="row content">
-      <center>
-      <h2>옴팡이's PHP</h2>
-      <img style="width: 900px;"src="https://mblogthumb-phinf.pstatic.net/MjAyMDAzMDNfNTgg/MDAxNTgzMjAxMjU0MTUx.9Ph9r5ezy3L6CVaQ6VxEe6UuGoYxJtnGvV1hqNPAKQAg.IbWEa6z1BdGRK9gHAVBxOuJZ0y4yOImflsfVFP5FNwsg.GIF.theworkscompany/15.gif?type=w800" alt="">
-    </center>
+        <h2>본인만 볼 수 있는 하루 기록소</h2>
     </div>
   </div>
 </div>

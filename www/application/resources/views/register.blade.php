@@ -25,7 +25,7 @@
   </style>
 </head>
 <body style="height:100%; background: lightgray;">
-<div class="container-fluid" style="padding:0; height:100%;">
+<div class="container-fluid" style="padding:0; height:100%; position: relative; z-index: 1;">
       <?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/navbar.php");?>
       <?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/menu.php");?>
     <div class="row content">
@@ -79,6 +79,9 @@
   </form>
     </section>
   </div>
+</div>
+<div style="position: relative; z-index: 2;">
+<?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/footer.php");?>
 </div>
 </body>
 </html>

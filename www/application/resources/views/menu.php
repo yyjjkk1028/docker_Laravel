@@ -40,9 +40,9 @@
       <ul class="nav nav-pills nav-stacked" id="category">
       <li><a style="color:black" href="/main" class="menu"><h2>Home</h2></a></li>
         <li><a style="color:black" href="/note" class="menu"><h3>자유게시판</h3></a></li>
-        <li><a style="color:black" href="?/#abcd" class="menu"><h3>일기장</h3></a></li>
-        <li><a style="color:black" href="#section3" class="menu"><h3>보관소</h3></a></li>
-        <li><a style="color:black" href="#section3" class="menu"><h3>고객센터</h3></a></li>
+        <li><a style="color:black" href="/diary" class="menu"><h3>일기장</h3></a></li>
+        <li><a style="color:black" href="/save_file" class="menu"><h3>비밀저장소</h3></a></li>
+        <li><a style="color:black" href="/service" class="menu"><h3>고객센터</h3></a></li>
       </ul><br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">
@@ -52,6 +52,8 @@
           </button>
         </span>
       </div>
+      <br><br><br>
+      <img style="width: 250px;"src="https://mblogthumb-phinf.pstatic.net/MjAyMDAxMDhfMjk5/MDAxNTc4NDQ1OTI1MDY5.NVMC0jz0iu4SQmI-2l5bOlHdNF6wZ_M7pDmvuxLuvKMg.Ykw9JPWDTho2namxehCPA-at8Vuv2hKKwpXyvXJNDRgg.GIF.theworkscompany/11.gif?type=w800" alt="">
     </div>
 </body>
 </html>

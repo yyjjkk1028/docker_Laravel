@@ -16,7 +16,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>게시판</title>
+  <title>일기장</title>
   <link rel="stylesheet" type="text/css" href="http://cafecj.daum-img.net/cafebackup/css/1/backup.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
   <style>
@@ -35,9 +35,9 @@
     <?php include('navbar.php');?>
     <?php include('menu.php');?>
     <div class="row content">
-      <center>
-      <h2>옴팡이's PHP</h2>
-      <img style="width: 900px;"src="https://mblogthumb-phinf.pstatic.net/MjAyMDAzMDNfNTgg/MDAxNTgzMjAxMjU0MTUx.9Ph9r5ezy3L6CVaQ6VxEe6UuGoYxJtnGvV1hqNPAKQAg.IbWEa6z1BdGRK9gHAVBxOuJZ0y4yOImflsfVFP5FNwsg.GIF.theworkscompany/15.gif?type=w800" alt="">
+    <center>
+      <h2>로딩중...</h2>
+      <img style="width: 900px;"src="https://mblogthumb-phinf.pstatic.net/MjAyMDA3MTVfMTUw/MDAxNTk0NzgyNTI4MTA5.l1gsqosXrKBrkfMaV39_PDriYn-51KLPuS0YObC6_EQg.sWaSVfqtmDHUPtLKnPua54z9ecZyRhRk8EKu72L0bmAg.GIF.theworkscompany/02.gif?type=w800" alt="">
     </center>
     </div>
   </div>

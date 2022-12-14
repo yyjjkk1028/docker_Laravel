@@ -1,14 +1,11 @@
 <?php
-    $dns = "mysql:host=172.28.0.4;dbname=laravel;charset=utf8";
-    $username="lauser";
-    $pw="lauser1!";
-
-    try {
-        $conn = new PDO($dns, $username, $pw);
-        //echo '접속성공 축하합니다!';
-        header('Content-Type: text/html; charset-utf-8');
-        
-        //$result = $conn->query($query);
+    try 
+    {
+      require_once($_SERVER["DOCUMENT_ROOT"]."/../resources/views/conn.php");
+      if(!session_id()){ // 세션이 실행되어 있는지 여부를 체크합니다.
+        session_name('테스트세션'); //기본적으로 세션의 이름은 PHPSESSID 입니다.
+        session_start(); //세션 시작 
+    }
     } catch (PDOException $th) {
         echo '접속실패 : ' . $th->getMessage();
         echo mysql_connect_error();
@@ -23,9 +20,15 @@
   
 </head>
 <body>
-<div class="container-fluid" style="padding:0;">
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/navbar.php");?>
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/menu.php");?>
+<div class="container-fluid" style="padding:0; position: relative; z-index: 1;">
+    <?php 
+      include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/navbar.php");
+      include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/menu.php");
+      if($log_nam =="로그인")
+      {
+        errMsg("로그인을 하십시오.");
+      }
+    ?>
     <div class="row content">
       <form method="post" action="/insert">
       @csrf
@@ -48,6 +51,9 @@
         <br>
       </form>
     </div>
+</div>
+<div style="position: relative; z-index: 2;">
+<?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/footer.php");?>
 </div>
 </body>
 </html>

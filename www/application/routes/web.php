@@ -26,6 +26,10 @@ Route::get('/hello', function () {
         'name' => 'abc'
     ]);
 });
+//DB연동
+Route::get('/conn', function () {
+    return view('conn');
+});
 //----------------------화면구성-------------
 Route::get('/main', function () {
     return view('main');
@@ -49,14 +53,29 @@ Route::get('/note', function () {
 Route::get('/write', function () {
     return view('write');
 });
+Route::get('/review', function () {
+    return view('review');
+});
 Route::post('/insert', function () {
      return view('insert');
  });
 
 Route::post('/search_result',[SearchController::class,'store']);
 Route::get('/search_result',[SearchController::class,'search_result']);
-
+//-------------------일기장-----------------------------------------------//
+Route::get('/diary', function () {
+    return view('diary');
+});
 //------------------------------------------------//
+//-------------------보관소-----------------------------------------------//
+Route::get('/save_file', function () {
+    return view('save_file');
+});
+//------------------------------------------------//
+//-------------------고객센터-----------------------------------------------//
+Route::get('/service', function () {
+    return view('service');
+});
 // Route::get('/form', function () {
 //     return view('form');
 // });

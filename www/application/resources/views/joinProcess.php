@@ -1,8 +1,8 @@
 <?php
     require_once('conn.php');
     try {
-        $conn = new PDO($dns, $username, $pw);
-        header('Content-Type: text/html; charset-utf-8');
+        // $conn = new PDO($dns, $username, $pw);
+        // header('Content-Type: text/html; charset-utf-8');
         //$result = mysql_query($conn, $sql);
         $user_name = $_POST['username'];
         $user_id = $_POST['userid'];

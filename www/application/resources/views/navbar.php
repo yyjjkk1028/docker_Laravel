@@ -2,25 +2,23 @@
 if(!session_id()){ // 세션이 실행되어 있는지 여부를 체크합니다.
   session_name('테스트세션'); //기본적으로 세션의 이름은 PHPSESSID 입니다.
   session_start(); //세션 시작 
-  if(!$_SESSION['nickname'])
+}
+if(!isset($_SESSION['nickname']))
   {
   $log_nam ="로그인";
   $loging ="회원가입";
+  $log_href = "login";
+  $href = "register";
   }
   else{
   $log_nam = $_SESSION['nickname'];
   $loging ="로그아웃";
+  $log_href = "main";
+  $href = "logout";
   }
-}
-function disconn()
-{
-      //특정 세션 변수 삭제
-  unset($_SESSION['id']);
-  unset($_SESSION['nickname']);
-
-  session_unset();   // 모든 세션 변수의 등록 해지
-  session_destroy(); // 세션 아이디의 삭제
-}
+  // $log_nam ="로그인";
+  // $loging ="회원가입";
+  // $href = "register";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +33,14 @@ function disconn()
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin:0;">
+<h3 style="color:white; margin-left: 20px;margin-top: 10px; width: 200px;">옴팡이's PHP</h3>
   <div class="container-fluid justify-content-end">
     <ul class="navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" id="log_nam2" name="log_nam2" href="/login"><?php echo $log_nam;?></a>
+        <a class="nav-link" id="log_nam2" name="log_nam2" href="/<?php echo $log_href;?>"><?php echo $log_nam;?></a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" id="dbcd" name="abcd" href="/login" onclick="disconn()"><?php echo $loging;?></a>
+        <a class="nav-link" id="dbcd" name="abcd" href="/<?php echo $href;?>" ><?php echo $loging;?></a>
         </li>
     </ul>
   </div>
