@@ -26,7 +26,7 @@
   </style>
 </head>
 <body>
-<div class="container-fluid" style="padding:0; height:100%; position: relative; z-index: 1;">
+<div class="container-fluid" style="padding:0; position: relative; z-index: 1;">
     <?php 
       include('navbar.php');
       include('menu.php');
@@ -73,7 +73,7 @@
 			  </table>
         <br>
         <a href="/write">
-			    <input type="button" style="padding:5px 12px;Color:#ff5656;Background:#ffffff;font-size:14px;border:1px solid black;border-radius:2px;" value="글쓰기">
+        <input type="button" style="padding:5px 12px;Color:#ff5656;Background:#ffffff;font-size:14px;border:1px solid white;border-radius:10px;" value="글쓰기">
 		    </a>
         <hr><br>
         <form action="/search_result" method="post">

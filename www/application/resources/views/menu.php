@@ -25,7 +25,7 @@
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
-        height: auto;
+        height: 1500px;
         padding: 15px;
       }
       .row.content {height: auto;} 
@@ -36,13 +36,12 @@
   </style>
 </head>
 <body style="height:100%; background:lightgray;">
-    <div class="col-sm-3 sidenav">
+    <div class="col-sm-3 sidenav" style="height:1200px;">
       <ul class="nav nav-pills nav-stacked" id="category">
-      <li><a style="color:black" href="/main" class="menu"><h2>Home</h2></a></li>
-        <li><a style="color:black" href="/note" class="menu"><h3>자유게시판</h3></a></li>
-        <li><a style="color:black" href="/diary" class="menu"><h3>일기장</h3></a></li>
-        <li><a style="color:black" href="/save_file" class="menu"><h3>비밀저장소</h3></a></li>
-        <li><a style="color:black" href="/service" class="menu"><h3>고객센터</h3></a></li>
+      <li><a style="color:black;" href="/main" class="menu"><h2 style="font-weight:bold;">Home</h2></a></li>
+        <li><a style="color:black" href="/note" class="menu"><h2 style="font-weight:bold;">자유게시판</h2></a></li>
+        <li><a style="color:black" href="/diary" class="menu"><h2 style="font-weight:bold;">일기장</h2></a></li>
+        <li><a style="color:black" href="/service" class="menu"><h2 style="font-weight:bold;">고객센터</h2></a></li>
       </ul><br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">

@@ -66,10 +66,16 @@ Route::get('/search_result',[SearchController::class,'search_result']);
 Route::get('/diary', function () {
     return view('diary');
 });
-//------------------------------------------------//
-//-------------------보관소-----------------------------------------------//
-Route::get('/save_file', function () {
-    return view('save_file');
+Route::get('/diary_view', function () {
+    return view('diary_view');
+});
+
+Route::post('/diary_upload', function () {
+    return view('diary_upload');
+});
+
+Route::get('/diary_review', function () {
+    return view('diary_review');
 });
 //------------------------------------------------//
 //-------------------고객센터-----------------------------------------------//

@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container-fluid" style="padding:0; height:100%; position: relative; z-index: 1;">
+<div class="container-fluid" style="padding:0; position: relative; z-index: 1;">
       <?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/navbar.php");?>
       <?php include($_SERVER["DOCUMENT_ROOT"]."/../resources/views/menu.php");?>
     <div class="row content">

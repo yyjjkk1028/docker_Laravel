@@ -28,6 +28,13 @@
         if($user_pwd1 != $user_pwd2){
             errMsg("비밀번호가 일치하지 않습니다.");
         }
+        $select_sql = "SELECT * FROM user_join where user_id = :user_id ";
+        $sel_res = $conn->prepare($select_sql);
+        $sel_res->execute([ ':user_id' => $user_id ]);
+        $row = $sel_res -> fetch();
+        if($row['user_id'] == $user_id){
+            errMsg('이미 존재하는 아이디입니다.');
+        }
         $sql = "INSERT INTO user_join(user_name, user_id, user_email, user_pwd) VALUES(:user_name, :user_id, :user_email, :user_pwd)";
         $result = $conn->prepare($sql);
         $result->execute([

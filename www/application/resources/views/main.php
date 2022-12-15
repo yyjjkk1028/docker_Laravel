@@ -1,14 +1,7 @@
 <?php
-    $dns = "mysql:host=172.28.0.4;dbname=laravel;charset=utf8";
-    $username="lauser";
-    $pw="lauser1!";
-
-    try {
-        $db = new PDO($dns, $username, $pw);
-        //echo '접속성공 축하합니다!';
-        header('Content-Type: text/html; charset-utf-8');
-        $query = "select * from notes order by idx desc limit 0,10";
-        $result = $db->query($query);
+    try 
+    {
+      require_once('conn.php');
     } catch (PDOException $th) {
         echo '접속실패 : ' . $th->getMessage();
     }

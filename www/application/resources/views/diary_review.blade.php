@@ -7,16 +7,19 @@
         session_start(); //세션 시작 
     }
     $note_idx = $_GET['idx'];
-    $sql = "SELECT * FROM notes where idx = :idx ";
+    $user_name = $_SESSION['nickname'];
+    $sql = "SELECT * FROM user_sercet where srt_name = :user_name and idx = :idx";
     $result = $conn->prepare($sql);
     $result->execute([
-        ':idx' => $note_idx]);
+        ':idx' => $note_idx,
+        ':user_name' => $user_name
+    ]);
     $row = $result -> fetch();
-    $not_name = $row['name'];
-    $not_title = $row['title'];
-    $not_cont = $row['content'];
+    $not_name = $row['srt_name'];
+    $not_title = $row['srt_title'];
+    $not_cont = $row['srt_cont'];
 
-    $update_sql = "UPDATE notes set thumbup = thumbup + 1 where idx = :idx ";
+    $update_sql = "UPDATE user_sercet set thumbup = thumbup + 1 where idx = :idx ";
     $result1 = $conn->prepare($update_sql);
     $result1->execute([
         ':idx' => $note_idx]);
@@ -55,10 +58,10 @@
               <tbody>
                 <tr>
                     <td width="50" style="padding:9px 5px; background:lightblue;"><center>작성자</center></td>
-                    <td class="form-control" style="font-size:15px;"><?php echo $not_name?></td>
+                    <td class="form-control"><?php echo $not_name?></td>
                 </tr>
                 <tr>
-                <td width="50" style="padding:9px 5px; background:lightblue; border-top:2px solid lightgray; border-bottom:2px solid lightgray;"><center>제 목</center></td>
+                    <td width="50" style="padding:9px 5px; background:lightblue; border-top:2px solid lightgray; border-bottom:2px solid lightgray;"><center>제 목</center></td>
                     <td class="form-control"><?php echo $not_title?></td>
                 </tr>
                 <tr>
@@ -69,7 +72,7 @@
             </table>
           </div>
         </div>
-        <br><a href="/note">
+        <br><a href="/diary">
               <input type="button" style="padding:5px 12px;Color:#ff5656;Background:#ffffff;font-size:14px;border:1px solid white;border-radius:10px;" value="목록">
             </a>
         </center>
