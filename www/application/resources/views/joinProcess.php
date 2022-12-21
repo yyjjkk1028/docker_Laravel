@@ -32,18 +32,20 @@
         $sel_res = $conn->prepare($select_sql);
         $sel_res->execute([ ':user_id' => $user_id ]);
         $row = $sel_res -> fetch();
-        if($row['user_id'] == $user_id){
+        if(isset($row['user_id'])){
             errMsg('이미 존재하는 아이디입니다.');
         }
-        $sql = "INSERT INTO user_join(user_name, user_id, user_email, user_pwd) VALUES(:user_name, :user_id, :user_email, :user_pwd)";
-        $result = $conn->prepare($sql);
-        $result->execute([
-            ':user_name' => $user_name,
-            ':user_id' => $user_id,
-            ':user_email' => $user_email, 
-            ':user_pwd' => $user_pwd2 ]);
+        else{
+            $sql = "INSERT INTO user_join(user_name, user_id, user_email, user_pwd) VALUES(:user_name, :user_id, :user_email, :user_pwd)";
+            $result = $conn->prepare($sql);
+            $result->execute([
+                ':user_name' => $user_name,
+                ':user_id' => $user_id,
+                ':user_email' => $user_email, 
+                ':user_pwd' => $user_pwd2 ]);
         echo goodmsg('회원가입되었습니다');
         header("location:main");
+        }
     } catch (PDOException $th) {
         echo '접속실패 : ' . $th->getMessage();
         echo mysql_connect_error();

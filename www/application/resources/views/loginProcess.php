@@ -18,8 +18,7 @@ try {
     $password = $_POST['userpwd'];
     $sql = "SELECT * FROM user_join where user_id = :userid ";
     $result = $conn->prepare($sql);
-    $result->execute([
-        ':userid' => $userid]);
+    $result->execute([':userid' => $userid]);
     $row = $result -> fetch();
     if(!$userid){
             errMsg("아이디를 입력해주세요.");
